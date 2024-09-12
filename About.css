@@ -1,0 +1,193 @@
+main {
+    padding: 20px;
+}
+
+.about-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        #why-choose {
+            padding: 50px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        .why-choose-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        .question-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+       
+        .why-choose-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .why-choose-container p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .why-choose-container  ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .why-choose-container  li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 1.1rem;
+            color: #444;
+            font-style: italic;
+        }
+
+        .why-choose-container  li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-size: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .menu-bar ul {
+                flex-direction: column;
+            }
+
+            .menu-bar ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-text p {
+                font-size: 0.9rem;
+            }
+
+            .why-choose-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .question-box h3 {
+                font-size: 1.5rem;
+            }
+
+            .question-box {
+                padding: 10px;
+            }
+
+            .footer-col h3, .footer-col h2 {
+                font-size: 1.2rem;
+            }
+
+            .footer-para, .text-office, .underline, .email, .phone {
+                font-size: 0.9rem;
+            }
+
+            .social-icons a {
+                font-size: 0.9rem;
+            }
+
+            .copyright {
+                font-size: 0.8rem;
+            }
+        }
