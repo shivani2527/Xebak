@@ -1,0 +1,145 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  40px 20px;
+    /* background-color: #005f78;  */
+    background-color:#34495e ;
+}
+.newsletter .icon {
+    margin-right: 10px;
+    font-size: 2em; 
+    color: white;
+}
+.newsletter h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    margin-right: 20px;
+}
+.newsletter p {
+    margin: 10px 0 20px;
+    color: white;
+    text-align: center;
+    /* margin-right: 20px; */
+}
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    margin-right: 10px;
+    flex: 1;
+}
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #007acc;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+    border-left: 1px solid white;
+}
+.newsletter button:hover {
+    background-color: #005fa3;
+}
+ .footer {
+    background-color: #005f78;
+    color: white;
+    padding: 40px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+}
+.footer-column h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff7058; 
+}
+.footer-column h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin: 10px 0;
+}
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+.footer-bottom {
+    background-color: #ff7058;
+    color: white;
+    text-align: center;
+    padding: 10px 10px; 
+
+}
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+.contact-info1 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contact-info1 i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+.contact-info1 span {
+    font-size: 14px;
+}
+.contact-info1 img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}

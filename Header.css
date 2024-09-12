@@ -1,0 +1,142 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.follow-us {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    margin-left: 65px;
+}
+
+.follow-us p {
+    margin: 0;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.follow-us a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+   margin-right: 90px;
+   margin-left: 40px; 
+
+}
+
+.contact div {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.contact i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact div span {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 150px;
+    height: 50px;
+    margin-left: 60px;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #000;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 30%;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.nav a:hover {
+    text-decoration: solid;
+    color: #f48c59;
+}
+.call-to-action button {
+    /* display: flex; */
+    align-items: center;
+    background-color: #f48c59;
+    padding: 10px 20px;
+    margin-left: 40px;
+    color: #fff;
+    border-radius:10px;
+    border: none;
+    cursor: pointer;
+}
+.call-to-action button:hover{
+    background-color: #004080;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+
+ .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 

@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+       
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 10px 20px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .top-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(70deg, #ff7d4d 45%, darkblue 45%);
+            z-index: -1;
+        }
+
+        .follow-us {
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            margin-left: 65px;
+        }
+
+        .follow-us p {
+            margin: 0;
+            margin-right: 1rem;
+            color: #fff;
+        }
+
+        .follow-us a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            z-index: 1;
+           margin-right: 90px;
+           margin-left: 40px; 
+       
+        }
+
+        .contact div {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+
+        .contact i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .contact p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact div span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 50px;
+            margin-left: 60px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            color: #000;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: 30%;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .nav a:hover {
+            text-decoration: solid;
+            color: #f48c59;
+        }
+
+        .call-to-action button {
+            /* display: flex; */
+            align-items: center;
+            background-color: #f48c59;
+            padding: 10px 20px;
+            margin-left: 40px;
+            color: #fff;
+            border-radius:10px;
+            border: none;
+            cursor: pointer;
+        }
+        .call-to-action button:hover{
+            background-color: #004080;
+        }
+
+        /* .call-to-action button {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        } */
+
+       
+
+.hero {
+    background-image: url('student_pic.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color:#fff;
+    padding: 0 20px;
+}
+
+.hero .hero-content {
+    max-width: 600px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+            padding: 20px;
+          
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero .hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.hero .hero-buttons button {
+    background-color: #f48c59;
+    color:#fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero .hero-buttons button.contact-us {
+    background-color: #004080;
+}
+
+.hero .hero-buttons button:hover {
+    background-color: #333;
+}
+
+         .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    } 
+
+     .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    } 
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .top-header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            .follow-us, .contact {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .main-header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+                margin-left: 0;
+                width: 100%;
+                align-items: flex-start;
+            }
+
+            .call-to-action {
+                margin-left: 0;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-header {
+                padding: 10px;
+            }
+
+            .follow-us p, .contact p {
+                font-size: 0.8rem;
+            }
+
+            .contact i {
+                font-size: 1.2rem;
+            }
+
+            .logo img {
+                width: 80px;
+                height: 40px;
+            }
+
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav a {
+                font-size: 0.9rem;
+            }
+
+            .call-to-action p {
+                font-size: 0.9rem;
+            }
+        }
+        /*About section*/
+
+ .about {
+    padding: 60px 0;
+    background-color: #F0F8FF;
+
+}
+.title{
+    /* text-align: center;
+           
+            font-size: 2rem; 
+            
+            color: #ff5733 ; */
+            text-align: center;
+    font-size: 3rem; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #FF5733; /* Keep the color as specified */
+    letter-spacing: 1.5px; /* Add some letter spacing */
+    margin-top: 20px; /* Add top margin */
+    margin-bottom: 20px; /* Add bottom margin */
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin-right: 5%;
+    gap: 10px; 
+}
+
+.phone-frame {
+    width: 100%;
+    padding-top: 110%; 
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    /* flex: 1; */
+}
+
+.phone-frame img {
+    position: absolute;
+    top: -50px ;
+    left: 0;
+    width: 130%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 130px;
+}
+
+.img1 {
+    border: 5px solid #FF5733; 
+    border-radius: 20px;
+    margin-left: 30px;
+    /* margin-bottom: 100px; */
+    margin-top: -50px;
+}
+
+.img2 {
+    border: 5px solid darkblue; 
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.about-text {
+    width: 55%;
+    margin-left: 160px;
+    margin-right: 40px;
+}
+
+.about-text h2 {
+    /* font-size: 36px;
+    margin-bottom: 20px; */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.about-text p {
+    /* line-height: 1.6;
+    margin-bottom: 20px; */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.stat {
+    width: 48%;
+    text-align: center;
+}
+
+.stat span {
+    /* display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px; */
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5733; 
+    padding: 10px;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-bottom: 10px;
+}
+.stat h3 {
+    font-size: 1.25rem;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.stat p {
+    margin-left: 60px;
+    color: #777;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: darkblue; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #ff5733;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        margin-bottom: 20px;
+    }
+
+    .phone-frame {
+        width: 48%;
+        padding-top: 90%; 
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .stat {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+    }
+}
+/* Courses */
+
+.courses-section {
+            /* display: flex; */
+            justify-content: space-between;
+          /*  padding: 20px; */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+
+        }
+        .courses-title {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 2rem;
+            color: #ff5733 ;
+        }
+
+        .courses-container {
+            display: flex; 
+            /* justify-content: space-between; */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            background-color: #f4f9fd;
+            border-radius: 8px;
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            /* box-shadow: #ccc; */
+            overflow: hidden;
+            text-align: left;
+            width: 30%;
+            margin: 10px;
+            display: none;
+            flex: 0 1 30%;
+            margin: 15px;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .course-content {
+            padding: 20px;
+        }
+
+        .course-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .course-content a {
+            font-size: 0.875rem;
+            color: #ff4500;
+            text-decoration: none;
+        }
+
+        .course-content a:hover {
+            text-decoration: underline;
+        }
+
+        .media-tag {
+            position: absolute;
+            margin-bottom: 30px;
+           margin-right:15px;
+            background-color: #ff4500;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        
+           
+        }
+
+        .media-tag i {
+            margin-left : 5px;
+        }
+            .slider-controls {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .line {
+        height: 2px;
+        width: 50px;
+        margin: 0 10px;
+        background-color: #bbb;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        cursor: pointer;
+    }
+    .active {
+        background-color: #717171;
+    } 
+
+        .container1 {
+            display: flex;
+            flex-direction: row;
+        }
+        .right-section {
+             background-color: #004080; /*#007b8f*/
+            color: white;
+            padding: 40px;
+            width: 50%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            box-sizing: border-box;
+            /* padding: 5px; */
+            
+        }
+        .left-section img {
+            max-width: 100%;
+            
+            height: auto;
+           
+        }
+        .feature {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .feature img {
+            vertical-align: middle;
+            margin-right: 20px;
+            background-color: #ff4500;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .feature h3 {
+            /* display: inline; */
+            font-size: 24px;
+            /* margin: 0; */
+            margin: 0 40px 0 0;
+        }
+        .feature p {
+            /* margin: 10px 0 0 40px; */
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+           /* margin-left: 60px;
+           margin: 0;
+           padding-left: 60px;  */
+        }
+        .feature div {
+            display: flex;
+            flex-direction: column;
+        }
+        .feature div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*  */
+        .container2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+.left-side {
+  width: 600px;
+}
+
+.right-side {
+  width: 500px;
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+/* .list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #000000;
+ 
+  color: white;
+  border-bottom: 1px solid #555;
+} */
+.list-item {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  padding: 15px;
+  background-color: #000000;
+  /* background-color: #ccc; */
+  color: white;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+}
+
+
+.list-item:last-child {
+  border-bottom: none;
+}
+.question {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.answer {
+  display: none;
+  padding-top: 10px;
+  color: #ccc;
+}
+
+
+/* .check {
+  /* margin-right: 10px; 
+  color: #00ff00;
+}
+
+.plus {
+  margin-left: auto;
+  color: #fff;
+ 
+} */
+textarea.input-field {
+  height: 150px; 
+  padding: 15px; 
+}
+.input-field {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #c62828;
+}
+        .container3 {
+            display: flex;
+            
+            background-color: whitesmoke;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            width: 50%;
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            padding: 40px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .content h2 {
+            color: #ff5a5f;
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+       .content a {
+            text-decoration: none;
+            background-color: #ff5a5f;
+            color: #fff;
+            padding: 12px 24px;
+            /* border-radius: 5px; */
+            transition: background-color 0.3s;
+            align-self: flex-start;
+        }
+        .content a:hover {
+            background-color: #e04e4f;
+        }
+
+        /* .testimonials {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .testimonials h2 {
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .testimonials h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+        } */
+
+
+        /* .testimonials-wrapper {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        } */
+        /* .testimonials-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } */
+
+        /* .testimonials-wrapper {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .testimonials-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: calc(300px * 3 + 40px * 2);
+        } */
+
+
+        /* .testimonials-container {
+            display: flex;
+            transition: transform 1s ease;
+             width: calc(300px * 6 + 60px); 
+        } */
+
+
+        /* .testimonial {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex-shrink: 0;
+            margin: 0 10px;
+        }
+        .testimonial .quote {
+            font-size: 60px;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .testimonial .profile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .testimonial .profile img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .testimonial .profile h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .testimonial .profile span {
+            color: #888;
+            font-size: 14px;
+        } */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+}
+.testimonials h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+.testimonials-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* position: relative; */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.testimonials-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* width: calc(300px * 6 + 20px * 5);  */
+  width:100% ;  
+    /* width: max-content; */
+    /* width: calc(300px * 6+ 20px * 5); */
+}
+/* .testimonial {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+    margin: 0 10px;
+} */
+.testimonial {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    /* width: calc(100% / 3 - 5px);  */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+    margin: 0 10px;
+    
+}
+.testimonial .quote {
+    font-size: 60px;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    
+}
+.testimonial p {
+    color: #666;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    
+}
+.testimonial .profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.testimonial .profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.testimonial .profile h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.testimonial .profile span {
+    color: #888;
+    font-size: 14px;
+}
+
+/* .dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #717171;
+} */
+
+
+        /* .container4 {
+            text-align: center;
+            background-color: #34495e;
+            padding: 40px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 1800px;
+            margin-left: 35px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #ecf0f1;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input, select {
+            width: calc(50% - 10px);
+            padding: 10px;
+            /* margin: 10px 5px; 
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            background-color: #ffffff;
+            color: #2c3e50;
+            margin: 0 5px;
+        }
+        input::placeholder, select::placeholder {
+            color: #7f8c8d;
+        }
+       
+        .btn {
+            display: inline-block;
+            background-color: #e67e22;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+         */
+         .container4 {
+    /* background-color: #34495e; */
+    background-image: url('istockphoto-1159577042-612x612.jpg') ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+    background-position: center;
+   
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    /* border-radius: 10px; */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    /* margin-bottom: 20px;
+    font-size: 1.2em; */
+    width: 60%; 
+margin-left: 0; 
+line-height: 1.5; 
+}
+
+form {
+    max-width: 600px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: calc(50% - 10px);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #2c3e50;
+    margin-right: 20px;
+}
+
+input::placeholder, select::placeholder {
+    color: #7f8c8d;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.event-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.event-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+.container5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box2 {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.box2 .contents {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.box2 .date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f96332;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.box2 .date .day {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box2 .date .month {
+    display: block;
+    font-size: 0.9em;
+}
+
+.box2 h3 {
+   margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box2 p {
+    /* margin: 10px 0;
+    font-size: 1em;
+    color: #777;
+    line-height: 1.5em; */
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+    line-height: 1.5em;
+    display: inline;
+    top: 0;
+}
+
+
+.box2 .time-location .time {
+    color: #f96332;
+}
+.read-more {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #f96332;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+.box2:hover {
+    transform: translateY(-10px);
+}
+
+.box2:hover .contents {
+    background-color: #2c3e50;
+}
+
+.box2:hover h3,
+.box2:hover .read-more {
+    color: #f96332;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+       .newsletter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:  40px 20px;
+            /* background-color: #005f78;  */
+            background-color:#34495e ;
+        }
+        .newsletter .icon {
+            margin-right: 10px;
+            font-size: 2em; 
+            color: white;
+        }
+        .newsletter h1 {
+            margin: 0;
+            color: white;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        .newsletter p {
+            margin: 10px 0 20px;
+            color: white;
+            text-align: center;
+            /* margin-right: 20px; */
+        }
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            /* margin-right: 10px; */
+            flex: 1;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #007acc;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            color: white;
+            cursor: pointer;
+            border-left: 1px solid white;
+        }
+        .newsletter button:hover {
+            background-color: #005fa3;
+        }
+         .footer {
+            background-color: #005f78;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .footer-column h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #ff7058; 
+        }
+        .footer-column h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin: 10px 0;
+        }
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: start;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        .footer-bottom {
+            background-color: #ff7058;
+            color: white;
+            text-align: center;
+            padding: 10px 10px; 
+        
+        }
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+        
+        }
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .contact-info span {
+            font-size: 14px;
+        }
+        .contact-info img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+ 
+        </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="top-header">
+            <div class="follow-us">
+                <p>Follow Us</p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <div class="contact">
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>
+                        <p>Call Now!</p>
+                        <p>+123 4567 890</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>
+                        <p>Email Now</p>
+                        <p>info@gmail.com</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>
+                        <p>Address</p>
+                        <p>3rd Floor Best World.</p>
+                    </span>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="marquee-container">
+            <div class="marquee">Admission Open</div>
+        </div> -->
+
+        <div class="main-header">
+            <div class="logo">
+                <img src="1000036186-removebg-preview.png" alt="College Logo">
+            </div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <div class="dropdown">
+                <a href="#">Courses</a>
+                <div class="dropdown-content">
+                    <a href="#">Oracle Dtabase</a>
+                    <a href="#">Software Testing</a>
+                    <a href="#">Full stack </a>
+                    <a href="#">Frontend</a>
+                    <a href="#">Backend</a>
+                </div>
+                </div>
+                <a href="#">Blog</a>
+               <div class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">It Services</a>
+                    <a href="#">Consultancy</a>
+                    <a href="#">Healthcare</a>
+                    <a href="#">Trading </a>
+                </div>
+            </div>
+                <a href="#">Pages</a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </nav>
+            <div class="call-to-action">
+                <button>sign in</button>
+            </div>
+        </div>
+    </header>
+    <!-- <main>
+        <section class="hero">
+            <div class="container">
+                <h1>WELCOME TO OUR E-LEARNING PLATFORM</h1>
+                <p>EMPOWERING YOU WITH THE BEST ONLINE COURSES</p>
+                <button>Discover More →</button>
+            </div>
+        </section>
+    </main> -->
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>WELCOME TO COLLEGE</h1>
+                <h2>WITH TWENTY YEARS OF EXPERIENCE</h2>
+                <p>Donec vitae libero non enim placerat eleifend aliquam erat volutpat. Curabitur diam ex, dapibus purus sapien, cursus sed nisl tristique, commodo gravida lectus non.</p>
+                <div class="hero-buttons">
+                    <button>Discover More →</button>
+                    <button class="contact-us">Contact Us →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- About section -->
+<section class="about">
+    <h2 class="title">About</h2>
+    <div class="container">
+        <div class="about-img">
+            <div class="phone-frame">
+                <img src="AdobeStock_233296652.jpg" alt="Image 1" class="img1">
+            </div>
+            <div class="phone-frame">
+                <img src="istockphoto-pic4.webp" alt="Image 2" class="img2">
+            </div>
+        </div>
+        <div class="about-text">
+            <h2> A Few Words About the JRP INDIA</h2>
+            <p>Our university offers a wide range of courses designed to help students secure placements in top companies. Our programs are tailored to equip you with the skills and knowledge needed to excel in today's competitive job market.</p>
+            <p>We provide comprehensive employment services, including asset payroll and benefits administration, management assistance, and global business payment solutions. We also offer personalized employer readings from religious texts or literature to ensure compliance with global standards.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span>01</span>
+                    <h3>Doctoral Degrees</h3>
+                    <p>consectetur adipiscing elit sed do eiusmod tem incididunt.</p>
+                </div>
+                <div class="stat">
+                    <span>02</span>
+                    <h3>Global Students</h3>
+                    <p>consectetur adipiscing elit sed do eiusmod tem incididunt.</p>
+                </div>
+            </div>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</section> 
+<!-- courses -->
+
+  <section class="courses-section">
+    <h2 class="courses-title">Our Courses</h2>
+        <div class="courses-container">
+    <div class="course-card">
+        <img src="backend_img.jpg" alt="Biochemistry">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>Oracle Database</h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="course-card">
+        <img src="full stack_img.jpg" alt="Business Media">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>FullStack</h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="course-card">
+        <img src="oracle database_img.jpg" alt="Corporate Finance">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>Software Tresting</h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="course-card">
+        <img src="oracle database_img.jpg" alt="Corporate Finance">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>Frontend </h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="course-card">
+        <img src="oracle database_img.jpg" alt="Corporate Finance">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>Backend</h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="course-card">
+        <img src="oracle database_img.jpg" alt="Corporate Finance">
+        <div class="media-tag"><i class="fas fa-graduation-cap"></i> Media</div>
+        <div class="course-content">
+            <h3>English</h3>
+            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+            <a href="#">Read More →</a>
+        </div>
+    </div>
+    <div class="slider-controls">
+        <span class="line" onclick="showSlide(1)"></span>
+        <span class="line" onclick="showSlide(2)"></span>
+    </div>
+</section>
+<div class="container1">
+    <div class="right-section">
+        <h1>Our Best Features</h1>
+        <p>Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry.</p>
+        <div class="feature">
+         <img src="https://img.icons8.com/ios-filled/50/ffffff/teacher.png" alt="Skilled Teachers" style="background-color: #ff4500 ;">
+    
+        <h3>Skilled Teachers</h3>
+        <p>Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.</p>
+         
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/book-shelf.png" alt="Affordable Courses" style="background-color: #ff4500 ;">
+            
+            <h3>Modest Courses</h3>
+            <p>Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.</p>
+       
+        </div>
+        <div class="feature">
+        
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/clock.png"  alt="Efficient & Flexible " style="background-color: #ff4500 ;">
+            <h3>Efficient Flexible</h3>
+            <p>Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.</p>
+        </div>
+        
+    </div>
+    <div class="left-section">
+        <img src="feature_img.jpg" alt="Student Image">
+    </div>
+</div>
+ <!-- <div class="container2">
+    <div class="left-side">
+      <h1 class="title">Get every single answer here.</h1>
+      <p>A business or organization established to provide a particular service, typically one that involves a organizing transactions.</p>
+      <div class="list-item">
+        <i class="check"></i>
+        <p>01 Cras turpis felis, elementum sed mi at arcu ?</p>
+        <i class="plus"></i>
+      </div>
+      <div class="list-item">
+        <i class="check"></i>
+        <p>02 Vestibulum nibh risus, in neque eleifendulputate sem ?</p>
+        <i class="plus"></i>
+      </div>
+      <div class="list-item">
+        <i class="check"></i>
+        <p>03 Donec maximus, sapien id auctor ornare ?</p>
+        <i class="plus"></i>
+      </div>
+      <div class="list-item">
+        <i class="check"></i>
+        <p>04 Vestibulum nibh risus, in neque eleifendulputate sem ?</p>
+        <i class="plus"></i>
+      </div>
+      <div class="list-item">
+        <i class="check"></i>
+        <p>05 Donec maximus, sapien id auctor ornare ?</p>
+        <i class="plus"></i>
+      </div>
+    </div>  -->
+
+
+     <div class="container2">
+        <div class="left-side">
+          <h1 class="title">Get every single answer here.</h1>
+          <!-- <p>A business or organization established to provide a particular service, typically one that involves organizing transactions.</p> -->
+          
+          <div class="list-item">
+            <i class="check"></i>
+            <p class="question">01 Cras turpis felis, elementum sed mi at arcu ?</p>
+            <!-- <i class="plus fas fa-plus"></i>  -->
+            <!-- <div class="answer">Answer to question 01</div> -->
+          </div>
+          
+          <div class="list-item">
+            <i class="check"></i>
+            <p class="question">02 Vestibulum nibh risus, in neque eleifendulputate sem ?</p>
+            <!-- <i class="plus fas fa-plus"></i>  -->
+            <!-- <div class="answer">Answer to question 02</div> -->
+          </div>
+          
+          <div class="list-item">
+            <i class="check"></i>
+            <p class="question">03 Donec maximus, sapien id auctor ornare ?</p>
+            <!-- <i class="plus fas fa-plus"></i>  -->
+            <!-- <div class="answer">Answer to question 03</div> -->
+          </div>
+          
+          <div class="list-item">
+            <i class="check"></i>
+            <p class="question">04 Vestibulum nibh risus, in neque eleifendulputate sem ?</p>
+            <!-- <i class="plus fas fa-plus"></i> -->
+            <!-- <div class="answer">Answer to question 04</div> -->
+          </div>
+          
+          <div class="list-item">
+            <i class="check"></i>
+            <p class="question">05 Donec maximus, sapien id auctor ornare ?</p>
+             <!-- <i class="plus fas fa-plus"></i>  -->
+            <!-- <div class="answer">Answer to question 05</div> -->
+          </div>
+        </div> 
+
+   
+    <div class="right-side">
+      <h2 class="title">Make An Contact</h2>
+      <input type="text" class="input-field" placeholder="First Name">
+      <input type="email" class="input-field" placeholder="Email">
+      <input type="tel" class="input-field" placeholder="Phone">
+      <textarea class="input-field" placeholder="Write Comments"></textarea>
+      <button class="submit-button">Submit Now</button>
+    </div>
+  </div>
+  <div class="container3">
+    <div class="image">
+        <img src="IMAGE2.jpg" alt="People Learning">
+    </div>
+    <div class="content">
+        <h2>TRENDING COURSES</h2>
+        <h1>Learn Something New Every Day With eTreeks</h1>
+        <p>Sagittis congue augue egestas volutpat egestas magna suscipit egestas magna ipsum vitae purus efficitur ipsum primis and cubilia laoreet</p>
+        <a href="#">View all Courses ➝</a>
+    </div>
+</div>
+<section class="testimonials">
+  
+    <h1>What Our Clients Say</h1>
+    <div class="testimonials-wrapper">
+    <div class="testimonials-container">
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img0.jpg" alt="Profile 1">
+                <h3>Eget Porta</h3>
+                <span>Web Developer</span>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img1.jpg" alt="Profile 2">
+                <h3>Nulla Quis</h3>
+                <span>Web Developer</span>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img4.avif" alt="Profile 3">
+                <h3>Lorem Amet</h3>
+                <span>Web Developer</span>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img2.jpg" alt="Profile 4">
+                <h3>Jane Doe</h3>
+                <span>UI/UX Designer</span>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img5.avif" alt="Profile 5">
+                <h3>John Smith</h3>
+                <span>Project Manager</span>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
+            <div class="profile">
+                <img src="img2.jpg" alt="Profile 6">
+                <h3>Anna Lee</h3>
+                <span>Marketing Specialist</span>
+            </div>
+        </div>
+    </div>
+   </div> 
+</section>
+
+<div class="container4">
+    <h1>Search For Courses</h1>
+    <p>Our community is being called to reimagine the future. As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational.</p>
+    <form>
+        <div class="form-row">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="email" name="last_name" placeholder="last name">
+        </div>
+        <div class="form-row">
+            <input type="text" name="email" placeholder="email">
+            <input type="text" name="phone no" placeholder="phone no">
+        </div>
+        <div class="form-row">
+            <select name="campus">
+                <option value="" disabled selected>Courses</option>
+                <option value="campus1">Frontend</option>
+                <option value="campus2">backend</option>
+            </select>
+            <select name="level">
+                <option value="" disabled selected>city</option>
+                <option value="level1">Sitamarhi</option>
+                <option value="level2">Banglore</option>
+            </select>
+        </div>
+        <a href="#" class="btn">Search Courses Here ➔</a>
+    </form>
+</div>
+
+<section class="event-section">
+    <h2>Our Services</h2>
+    <div class="container5">
+        <div class="box2">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXN8ZW58MHx8MHx8fDA%3D" alt="Event Image">
+            <div class="contents">
+                <!-- <div class="date">
+                    <span class="day">18</span>
+                    <span class="month">March, 2023</span>
+                </div> -->
+                <h3>It Services </h3>
+                <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+                <a href="#" class="read-more">Read More</a>
+                <!-- <div class="time-location">
+                    <span class="time">3:45 pm - 4:00 pm</span>
+                    <span class="location">United Kingdom</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="box2">
+            <img src="https://media.istockphoto.com/id/1291751221/photo/the-sales-department-scores-again.webp?b=1&s=170667a&w=0&k=20&c=rooIuQ92SGUaGnPw7Ar52cwNmhk0S9iEk90HFVtoqSo=" alt="Event Image">
+            <div class="contents">
+                <!-- <div class="date">
+                    <span class="day">19</span>
+                    <span class="month">May, 2023</span>
+                </div> -->
+                <h3>Consultancy</h3>
+                <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+                <a href="#" class="read-more">Read More</a>
+                <!-- <div class="time-location">
+                    <span class="time">3:45 pm - 4:00 pm</span>
+                    <span class="location">United Kingdom</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="box2">
+            <img src="https://media.istockphoto.com/id/1204436253/photo/female-doctor-uses-tablet-to-show-x-ray-to-senior-man.webp?b=1&s=170667a&w=0&k=20&c=PBKDROOl9c3uGC2sDjUAWLW5EzIpX-qfkqWj18jc5SI=" alt="Event Image">
+            <div class="contents">
+                <!-- <div class="date">
+                    <span class="day">16</span>
+                    <span class="month">July, 2023</span>
+                </div> -->
+                <h3>Healthcare</h3>
+                <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+                <a href="#" class="read-more">Read More</a>
+                <!-- <div class="time-location">
+                    <span class="time">3:45 pm - 4:00 pm</span>
+                    <span class="location">United Kingdom</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="box2">
+            <img src="https://media.istockphoto.com/id/1446866753/photo/indian-stock-exchange-with-bull-art-placed-on-side-of-currency-notes.webp?b=1&s=170667a&w=0&k=20&c=1GvinZBLUmiN3Vqr3fT0hU8ecLyWYRm5Zmj8zDuF9Ho=" alt="Event Image">
+            <div class="contents">
+                <!-- <div class="date">
+                    <span class="day">25</span>
+                    <span class="month">August, 2023</span>
+                </div> -->
+                <h3>Trading</h3>
+                <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea tically</p>
+                <a href="#" class="read-more">Read More</a>
+                <!-- <div class="time-location">
+                    <span class="time">3:45 pm - 4:00 pm</span>
+                    <span class="location">United Kingdom</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News letter section -->
+<div class="newsletter">
+    <i class="icon fas fa-envelope"></i>
+    <h2>Subscribe for Newsletter</h2>
+   
+    <form>
+    <input type="email" placeholder="Email Address...">
+    <button>Subscribe Now</button>
+    </form>
+</div>
+
+<!-- footer -->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h2>About Us</h2>
+            <p>Suspensdisse non sem ante. Cras pretium gravida leo a convallis. Nam malesuada interdum metus, sit amet dictum ante congue eu. Maecenas ut maximus enim.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h2>Our Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Our Links</h2>
+            <ul>
+                <li>
+                    <div class="contact-info">
+                        <img src="img0.jpg" alt="User Image">
+                        <div>
+                            <span>Nothing impossible to need hard work</span><br>
+                            <span>8 May, 2020</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contact-info">
+                        <img src="img2.jpg" alt="User Image">
+                        <div>
+                            <span>Nothing impossible to need hard work</span><br>
+                            <span>8 May, 2020</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <span>+ (123) 456-7890</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <span>+ (123) 456-7890</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <span>info@gmail.com</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <span>info@gmail.com</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>42, Lorem Street, 3rd aros, Oldyork, USA 11003</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2013 Your Website Name. All Rights Reserved | Design  <a href="#">OnWeb</a></p>
+    </div>
+</footer>
+ <!-- <script>
+     let container = document.querySelector('.testimonials-container');
+        let index = 0;
+
+        function showNextTestimonial() {
+            index++;
+            if (index * 3 >= container.children.length) {
+                index = 0;
+            }
+            let offset = -index * (container.children[0].offsetWidth + 20) * 3;
+            container.style.transform = `translateX(${offset}px)`;
+        }
+
+        setInterval(showNextTestimonial, 6000);
+</script>  -->
+
+<script>
+    // JavaScript to create a 6-second slide interval for the courses
+    let slideIndex = 1;
+    showSlide(slideIndex);
+
+    function showSlide(n) {
+        let slides = document.getElementsByClassName("course-card");
+        let lines = document.getElementsByClassName("line");
+        let start = (n - 1) * 3;
+        let end = start + 3;
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = (i >= start && i < end) ? "block" : "none";
+        }
+
+        for (let i = 0; i < lines.length; i++) {
+            lines[i].className = lines[i].className.replace(" active", "");
+        }
+        lines[n-1].className += " active";
+    }
+    function showNextSlide() {
+        slideIndex++;
+        if (slideIndex > 2) { slideIndex = 1; }
+        showSlide(slideIndex);
+    }
+
+    setInterval(showNextSlide, 6000);
+</script>
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const questions = document.querySelectorAll('.list-item');
+  
+    questions.forEach(question => {
+      question.addEventListener('click', function () {
+        const answer = this.querySelector('.answer');
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  });
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>

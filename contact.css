@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-header {
+    background-color: #165b74;
+    padding: 20px;
+}
+
+.contact-header h1 {
+    color: white;
+    margin: 0;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: white;
+}
+
+.contact-info {
+    padding: 40px 20px;
+}
+
+.contact-info h2 {
+    color: #ff774b;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-info h3 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 0 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-card .icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-card span {
+    color: #777;
+    font-size: 16px;
+}
+
+.contact-card:hover {
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.map-section iframe {
+    width: 100%;
+    border: 0;
+    height: 450px;
+}
+ .inquiry-form {
+    padding: 40px 20px;
+} 
+
+ /*.inquiry-form h3 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.inquiry-form form {
+    display: flex;
+    flex-wrap: column;
+    justify-content: center;
+}
+
+.form-group {
+    position: relative;
+    width: 30%;
+    margin: 10px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-group span.icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ff774b;
+    font-size: 20px;
+}
+
+button[type="submit"] {
+    background-color: #ff774b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e0664a;
+} */
+ .inquiry-form h3 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.inquiry-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 30px;
+}
+
+.form-group {
+    position: relative;
+    flex: 1;
+    margin: 0 30px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 20px;
+    padding-right: 50px;
+    border: 1px solid #e0f7fa;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f0f8ff;
+}
+
+.form-group span.icon {
+    position: absolute;
+    top: 50%;
+   /*right: 20px; */
+    /* Adjusted top value to move the icon */
+    right: -35px;
+    transform: translateY(-50%);
+    color: #ff774b;
+    font-size: 20px;
+}
+
+textarea {
+    height: 150px;
+}
+.form-group.textarea-group {
+   width: 50%;
+    margin-top: 30px; /* Add margin above the message box */
+}
+
+button[type="submit"] {
+    background-color: #ff774b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e0664a;
+} 
+
